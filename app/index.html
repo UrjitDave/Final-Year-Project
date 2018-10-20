@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Blockchain based Dapp</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/form_style.css">
+    <link href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300,200" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"><!-- For-Mobile-Apps-and-Meta-Tags -->
+
+    
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script><!-- //For-Mobile-Apps-and-Meta-Tags -->
+        
+    <script src="js/app.js"></script>
+    
+
+  </head>
+  <body>
+    
+     <h1 style="color: #000;"><b>Registration Form</b></h1>
+    <center>
+    <div class="container">
+    
+        <div class="center">
+        
+            <div class="register agileits">
+                <form name="sform" action="./PDF.html" method="get">
+                    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>    
+                    <input class="name1" id="bname" name="Name of Buyer" placeholder="Name of Buyer" required="" type="text">
+                    <input class="name1" id="sname"name="Name of Seller" placeholder="Name of Seller" required="" type="text">
+                    <input class="enroll" id="tp"name="T.P. number" type="text" placeholder="Town Planning" required="">
+                    <input class="number" id="sno" name="Survey number" placeholder="Survey number" type="text" required="">
+                    <input class="area" id="ar"name="Area of Land" placeholder="Area of Land" required="" type="text">
+                    <input class="fund" id="pr" name="Price of Land" placeholder="Price of Land Deal" required="" type="text">
+                    <input class="mail" id="pics" name="Pics of Land" placeholder="Pics of Land Deal" required="" type="file">
+                    <div class="pen"  id="con" name="Conscience "> <span class="fundq">Declaration of conscience : I in my full control of senses approve this deed. And that I'm not signing this under any external threat or pressure</span><br>
+                    <input class="fundingy" value="1" name="Conscience" required="" type="radio">Yes
+                    <input class="fundingn" value="0" name="Conscience" required="" type="radio">No</div>
+                     <div class="tick" id="tc" name="Clearance"> <span class="fundq">Title Clearance : This Land is clear of all the records and no adverse claim of possession is due.</span><br>
+                    <input class="consciencey" value="1" name="Clearance" required="" type="radio">Clear
+                    <input class="consciencen" value="0" name="Clearance" required="" type="radio">Not Clear</div>
+                    <div class="mortgage" id="mort"name="Mortgaged"> <span class="fundq">Mortgaged  : This Land is mortgaged against x amount of money with y bank. </span><br>
+                    <input class="fundingy" value="1" name="Mortgaged" required="" type="radio">Yaa
+                    <input class="fundingn" value="0" name="Mortgaged" required="" type="radio">Not </div>
+
+                    <input value="Submit" type="button" id="btnQueryString" name="submit">
+
+
+                    <script type="text/javascript">
+                    $(function () {
+                    $("#btnQueryString").bind("click", function () {
+                     var url = "pdf.html?bname=" + encodeURIComponent($("#bname").val()) + "&sname=" + encodeURIComponent($("#sname").val()) + "&tp=" + encodeURIComponent($("#tp").val()) + "&sno=" + encodeURIComponent($("#sno").val()) + "&ar=" + encodeURIComponent($("#ar").val()) + "&pr=" + encodeURIComponent($("#pr").val()) + "&con=" + encodeURIComponent($('input[name=Conscience]:checked').val()) + "&tc=" + encodeURIComponent($('input[name=Clearance]:checked').val()) + "&mort=" + encodeURIComponent($('input[name=Mortgaged]:checked').val()) ;
+                        window.location.href = url;
+                        });
+                     });
+                   </script>
+                </form>
+            </div>
+                   
+            <div class="clear"></div>
+        
+    </div>
+    <div class="footer agile">
+            <p style="color: #000;"> © 2018 All Rights Reserved | Design by <a href="team.html">Urjit and Dakshyani</a></p>
+        </div>
+</div>
+</center>
+  </body>
+</html>

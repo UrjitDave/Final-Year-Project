@@ -1,0 +1,101 @@
+<html>
+<head>
+<title> Land Deed </title> 
+ <link rel="stylesheet" href="css/form_style.css">
+ <link rel="stylesheet" href="css/app.css">
+ <link href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300,200" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+ <script src="https://docraptor.com/docraptor-1.0.0.js"></script>
+  <script>
+    var downloadPDF = function() {
+      DocRaptor.createAndDownloadDoc("YOUR_API_KEY_HERE", {
+        test: true, // test documents are free, but watermarked
+        type: "pdf",
+        document_content: document.querySelector('html').innerHTML, // use this page's HTML
+        // document_content: "<h1>Hello world!</h1>",               // or supply HTML directly
+        // document_url: "http://example.com/your-page",            // or use a URL
+        // javascript: true,                                        // enable JavaScript processing
+        // prince_options: {
+        //   media: "screen",                                       // use screen styles instead of print styles
+        // }
+      })
+    }
+  </script>
+  <style>
+    @media print {
+      #pdf-button {
+        display: none;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+   <!--  <p>Check out the <a href="http://embark.readthedocs.io/en/latest/index.html" target="_blank">Official documentation</a> to see what this system is all about</p> -->
+<div class = "container">
+<div class = "register1">
+    <center><img src="images/emblemf.png" alt="Img not found" id="logo"/></center>
+    <h3 style="color: #000;">Land Records Registry ~ Government of India</h3>
+    <p class= "main">Name of the buyer : <!-- <input type="text" id="nb" /> --> <span id="nb"></span><br>
+    Name of the seller : <!-- <input type="text" id='ns' /> --><span id="ns"></span><br>
+    Town Planning Number :<!--  <input type="text"  id='tp' /> --><span id="tp"></span><br>
+    Survey Number : <!-- <input type="text" id='sn'/><br> --><span id="sno"></span><br>
+    Area of Land : <!-- <input type="text" id='al'/><br> --><span id="ar"></span><br>
+    Price of Land Deals : <!-- <input type="text" id='pl'/><br> --><span id="pr"></span><br>
+    Pics of Land Deal : <!-- <input type='file' id='pics'/><br> --><span ></span><br>
+    Declaration of Conscience : <!-- <input type="button" id="dc" placeholder="Sign" /><br> --><span id="con"></span><br> 
+    Title Clearance : <!-- <input type="button" id="tc" placeholder="Clear" > <br> --><span id="tc"></span><br>
+    Mortgage Details : <!-- <input type="button" id="md" placeholder="Yes">  <br> --><span id="mort"></span><br>
+    <br>
+    <br>
+    <!--  <input id="pdf-button" type="button" value="Download PDF" onclick="downloadPDF()" /><br> -->
+     <input id="bc" type="button" value = "Registry and Upload" onclick="location.href='./form.html';" /><br>
+     <script>var pfHeaderImgUrl = '';var pfHeaderTagline = '';var pfdisableClickToDel = 0;var pfHideImages = 0;var pfImageDisplayStyle = 'right';var pfDisablePDF = 0;var pfDisableEmail = 0;var pfDisablePrint = 0;var pfCustomCSS = '';var pfBtVersion='2';(function(){var js,pf;pf=document.createElement('script');pf.type='text/javascript';pf.src='//cdn.printfriendly.com/printfriendly.js';document.getElementsByTagName('head')[0].appendChild(pf)})();</script><a href="https://www.printfriendly.com" style="color:#6D9F00;text-decoration:none;" class="printfriendly" onclick="window.print();return false;" title="Printer Friendly and PDF"><img style="border:none;-webkit-box-shadow:none;box-shadow:none;" src="//cdn.printfriendly.com/buttons/print-button-gray.png" alt="Print Friendly and PDF"/></a>
+
+ </p>
+</div>
+</div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        var queryString = new Array();
+        $(function () {
+            if (queryString.length == 0) {
+                if (window.location.search.split('?').length > 1) {
+                    var params = window.location.search.split('?')[1].split('&');
+                    for (var i = 0; i < params.length; i++) {
+                        var key = params[i].split('=')[0];
+                        var value = decodeURIComponent(params[i].split('=')[1]);
+                        queryString[key] = value;
+                    }
+                }
+            }
+            
+                var bname =  queryString["bname"] ;
+                $("#nb").html(bname);
+                var sname =  queryString["sname"] ;
+                $("#ns").html(sname);
+                var tp = queryString["tp"] ;
+                $('#tp').html(tp);
+                var sno = queryString["sno"] ;
+                $('#sno').html(sno);
+                var ar = queryString["ar"] ;
+                $('#ar').html(ar);
+                var pr = queryString["pr"] ;
+                $('#pr').html(pr);
+                var con = queryString["con"] ;
+                $('#con').html(con);
+                var tc = queryString["tc"] ;
+                $('#tc').html(tc);
+                var mort = queryString["mort"] ;
+                $('#mort').html(mort);
+                
+                
+                     
+        });
+    </script>
+   
+
+</body>
+</html>
+
